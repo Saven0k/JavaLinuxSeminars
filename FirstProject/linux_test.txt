@@ -1,0 +1,30 @@
+sudo su
+
+mkdir Toys for schoolchildren
+mkdir Toys for preschoolers
+
+cd Toys for schoolchildren
+touch Robots
+touch Constructor
+touch Board games
+
+cd Toys for preschoolers
+touch Stuffed Toys
+touch Dolls
+touch Cars
+
+
+cat Toys for schoolchildren Toys for preschoolers > Name Toys
+
+mv Name toys Toys
+
+cd Toys
+ll
+
+apt install snapd
+install obs-studio
+snap remove obs-studio
+
+apt install cron
+3 * * * * curl http://www.google.com
+

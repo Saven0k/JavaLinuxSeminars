@@ -1,0 +1,84 @@
+﻿
+cat Pets
+touch Pets
+
+Собаки
+Кошки
+хомяки
+
+cat PackAnimals
+touch PackAnimals
+
+Верлюды 
+Ослы
+Лошади
+
+cat Pets PackAnimals > Human'sFriends
+
+mkdir test
+
+mv Human'sFriends ../test
+
+
+sudo apt update
+sudo mkdir mysql
+cd mysql
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:
+
+
+
+sudo dpkg -i man-db_2.9.4-2_amd64.deb
+dpkg -r man-db_2.9.4-2_amd64.deb
+
+history
+
+
+
+mysql -u root -p
+
+CREATE DATABASE Human'sFriends;
+
+CREATE DATABASE IF NOT EXISTS Human'sFriends;
+SHOW DATABASES;
+
+USE Human'sFriends;
+
+CREATE TABLE Dogs (Name varchar(255), Age int, Commands varchar(255));
+CREATE TABLE Cats  (Name varchar(255), Age int, Commands varchar(255));
+CREATE TABLE Horses  (Name varchar(255), Age int, Commands varchar(255));
+CREATE TABLE Camels  (Name varchar(255), Age int, Commands varchar(255));
+CREATE TABLE Donkeys  (Name varchar(255), Age int, Commands varchar(255));
+CREATE TABLE Hamsters  (Name varchar(255), Age int, Commands varchar(255));
+
+INSERT Dogs(Name, Age, Commands) 
+VALUES ("Vova" , 15, "Сидеть");
+
+INSERT Cats(Name, Age, Commands) 
+VALUES ("Max" , 15, "Сидеть");
+
+INSERT Horses(Name, Age, Commands) 
+VALUES ("Igor" , 15, "Сидеть");
+
+INSERT Camels(Name, Age, Commands) 
+VALUES ("Eva" , 15, "Сидеть");
+
+INSERT Donkeys(Name, Age, Commands) 
+VALUES ("Roma" , 15, "Сидеть");
+
+INSERT Hamsters(Name, Age, Commands) 
+VALUES ("Dez" , 15, "Сидеть");
+
+	
+DROP TABLE Camels;
+
+SELECT * FROM Horses FULL OUTER JOIN Donkeys ON Horses.name = Donkeys.name
+
+
+CREATE TABLE local_companies AS 
+  SELECT *
+  FROM Dogs, Cats, Donkeys, Hamsters
+  WHERE  Age > 1 AND Age < 3; 
+
+
+	
+SELECT * FROM Dogs, Cats, Donkeys, Hamsters;
